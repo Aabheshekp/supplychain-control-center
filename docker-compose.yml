@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    ports: ["8005:8000"]
+    environment: ["SUPPLYCHAIN_DB=/data/control_center.sqlite3"]
+    volumes: ["supplychain_data:/data"]
+volumes:
+  supplychain_data:
